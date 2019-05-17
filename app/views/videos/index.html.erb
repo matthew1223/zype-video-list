@@ -1,0 +1,15 @@
+<div class="video-list-container">
+  <h1> Video List </h1>
+  <ul class="video-list">
+    <% @records.each do |video| %>
+      <div class="video-item">
+        <img src="<%= video["thumbnails"].first.fetch("url") %>" />
+        <span class="title"><%= video["title"] %> </span>
+      </div>
+    <% end %>
+  </ul>
+
+  <div class="pagination-container">
+    <%== pagy_nav(@pagy) %>
+  </div>
+</div>

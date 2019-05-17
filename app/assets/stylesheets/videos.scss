@@ -1,3 +1,41 @@
-// Place all the styles related to the Videos controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.video-list-container {
+  h1 {
+    text-align: center;
+  }
+  .video-list {
+    padding: 0;
+    margin: auto;
+    width: 900px;
+
+    .video-item {
+      width: calc(20% - 16px);
+      margin-right: 8px;
+      display: inline-table;
+      text-align: center;
+      margin-top: 40px;
+
+      img {
+        width: 160px;
+        height: 120px;
+      }
+    }
+  }
+  .pagination-container {
+    text-align: center;
+    .pagy-nav {
+      margin-top: 60px;
+      display: inline-block;
+      background-color: #d6d6d6;
+      padding: 10px 20px;
+    }
+    .page {
+      padding: 8px;
+      a:visited {
+        color: blue;
+      }
+    }
+    .page.active {
+      color: red;
+    }
+  }
+}
